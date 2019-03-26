@@ -39,6 +39,6 @@ flightgoggles/launch/teleopExample.launch's original teleop node should be comme
 
 <br>
 
-##Explanation
+## Explanation
 + Simply move joystick's axes to move drone
 + push **joy.buttons[0]** to reset simulator (X button for PS4)
