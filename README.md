@@ -22,6 +22,7 @@
 flightgoggles/launch/teleopExample.launch's original teleop node should be commented using "!-- --"
 
 <br>
+
 + Then launch the roslaunch and run [python file](https://github.com/engcang/flightgoggles_angle_controller/blob/master/simple_angle_controller.py)
 ~~~shell
     $ roslaunch flightgoggles teleopExample.launch
