@@ -28,3 +28,11 @@ flightgoggles/launch/teleopExample.launch's original teleop node should be comme
     $ roslaunch flightgoggles teleopExample.launch
     $ python simple_angle_controller.py
 ~~~
+
+<br>
+
+## Results
++ video clip available [here](https://youtu.be/U4TJ7ZyfWD8)
+<p align="center">
+<img src="https://github.com/engcang/image-files/blob/master/flightgoggles_angle_controller/flight.PNG"/>
+</p>
