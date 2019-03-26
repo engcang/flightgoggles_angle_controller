@@ -36,3 +36,9 @@ flightgoggles/launch/teleopExample.launch's original teleop node should be comme
 <p align="center">
 <img src="https://github.com/engcang/image-files/blob/master/flightgoggles_angle_controller/flight.PNG"/>
 </p>
+
+<br>
+
+##Explanation
++ Simply move joystick's axes to move drone
++ push **joy.buttons[0]** to reset simulator (X button for PS4)
