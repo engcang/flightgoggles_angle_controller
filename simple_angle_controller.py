@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Feb 26 02:02:03 2019
-
 @author: mason
 """
 
@@ -38,8 +37,8 @@ global max_ang_y
 g = 9.81
 r2d = 180/np.pi
 d2r = np.pi/180
-max_ang_x = 35 * d2r # max angle -> edit here to change velocity of vehicle
-max_ang_y = 35 * d2r
+max_ang_x = 40 * d2r # max angle -> edit here to change velocity of vehicle
+max_ang_y = 40 * d2r
 
 ''' class '''
 class robot():
@@ -59,9 +58,12 @@ class robot():
         self.mode = 2 #default is mode 2
 
     def tf_callback(self, msg):
-        self.truth=msg.transforms[0].transform.translation
-        orientation_list = [msg.transforms[0].transform.rotation.x, msg.transforms[0].transform.rotation.y, msg.transforms[0].transform.rotation.z, msg.transforms[0].transform.rotation.w]
-        (self.roll, self.pitch, self.yaw) = euler_from_quaternion(orientation_list)
+#        for i in range(0,len(msg.transforms)):
+	i=len(msg.transforms)-1
+        if msg.transforms[i].child_frame_id=="uav/imu":
+            self.truth=msg.transforms[i].transform.translation
+            orientation_list = [msg.transforms[i].transform.rotation.x, msg.transforms[i].transform.rotation.y, msg.transforms[i].transform.rotation.z, msg.transforms[i].transform.rotation.w]
+            (self.roll, self.pitch, self.yaw) = euler_from_quaternion(orientation_list)
 
     def joy_callback(self, msg):
         self.joy = msg
